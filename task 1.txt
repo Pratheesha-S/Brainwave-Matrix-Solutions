@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fresh Fruits</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header>
+    <h1>Fresh Fruits Market</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Fruits</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Get Fresh Fruits Delivered to Your Doorstep!</h2>
+  </section>
+
+  <section class="section">
+    <h3>Our Popular Picks</h3>
+    <div class="fruits">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1592338715134-291eb7f726ff?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM0NjIzNzV8&ixlib=rb-4.1.0&q=85auto=format&fit=crop&w=500&q=60" alt="Apple">
+        <h4>Apple</h4>
+        <button onclick="addToCart('Apple')">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1587334206596-c0f9f7dccbe6?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM0NjI4MDd8&ixlib=rb-4.1.0&q=85auto=format&fit=crop&w=500&q=60" alt="Banana">
+        <h4>Banana</h4>
+        <button onclick="addToCart('Banana')">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1674362921108-0583508774f3?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM0NjI2OTl8&ixlib=rb-4.1.0&q=85auto=format&fit=crop&w=500&q=60" alt="Orange">
+        <h4>Orange</h4>
+        <button onclick="addToCart('Orange')">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Fresh Fruits Market. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+css
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #fff8f0;
+  color: #333;
+}
+
+header {
+  background: #ff6f61;
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: #ff3d00;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffd1b3;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background-image: url('https://images.unsplash.com/photo-1576402187877-6f97f6a106af?auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  background: rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.section h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.fruits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 250px;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card h4 {
+  margin: 10px 0;
+  font-size: 1.4rem;
+}
+
+.card button {
+  background: #ff6f61;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card button:hover {
+  background: #ff3d00;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+
+
+
+
+
+JS
+
+
+function addToCart(fruit) {
+  alert(fruit + " has been added to your cart!");
+}
